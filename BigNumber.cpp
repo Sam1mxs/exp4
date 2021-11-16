@@ -28,3 +28,11 @@ BigNumber BigNumber::operator+(const BigNumber& rhs) const {
     if(tmp) result.push_back(tmp);
     return result;
 }
+
+std::string BigNumber::to_string() const {
+    std::string result;
+    for(size_t i = 0; i < digits.size(); i++) {
+        result.push_back(digits[i] + '0');
+    }
+    return result;
+}
